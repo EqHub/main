@@ -1,0 +1,5 @@
+local Pl = game.PlaceId
+
+if Pl == 7993293100 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/game/JunkPunk%3ABuildandfly/mainscript/v2"))()
+ 
