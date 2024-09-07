@@ -1,0 +1,72 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Eq Hub - Slap Battles", "Ocean")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Go in doors first")
+Plr = {}
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+    table.insert(Plr,v.Name) 
+end
+local drop = Section:NewDropdown("Select Player!", "Click To Select", Plr, function(t)
+   PlayerTP = t
+end)
+
+Section:NewToggle("Auto Tp", "", function(t)
+    
+_G.TPPlayer = t
+while _G.TPPlayer do wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,7)
+
+
+
+
+   spawn(function()
+       game:GetService("RunService").RenderStepped:Connect(function()
+        pcall(function()
+            if _G.TPPlayer then
+            game:GetService'VirtualUser':CaptureController()
+            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+            end
+        end)
+       end)
+    end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+end
+end)
+
+ Section:NewButton("Refresh Players","Refresh Dropdown", function()
+    Plr = {}
+    for i,v in pairs(game:GetService("Players"):GetChildren()) do
+        table.insert(Plr,v.Name) 
+    end
+  drop:Refresh(Plr)
+end)
+
