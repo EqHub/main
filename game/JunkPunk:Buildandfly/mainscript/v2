@@ -1,0 +1,384 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Junk Punk: build and fly",
+    SubTitle = "by Eq Hub (Full function)",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Goto = Window:AddTab({ Title = "Goto", Icon = "arrow-right" }),
+        Players = Window:AddTab({ Title = "Players", Icon = "user" }),
+        Bring = Window:AddTab({ Title = "Bring", Icon = "box" }),
+
+
+
+
+
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Credits",
+        Content = "by Fxdogxd",
+        SubContent = "Ugly name lol", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+
+
+
+    Tabs.Goto:AddParagraph({
+        Title = "Go to island 🏝",
+        Content = "Yea is only go to"
+    })
+
+
+
+
+
+
+
+
+
+
+    
+ 
+
+
+
+    local Dropdown = Tabs.Goto:AddDropdown("Dropdown", {
+        Title = "Goto",
+        Values = {"factory", "Salvage City", "Sea Bridge", "Mount Char", "Forgotten Valley", " Order Supplies (Factory)", "Shop (Salvage City)", "Spawn boxes Place - 1 (Mount Char)", "Spawn boxes Place - 2 (Salvage City)", "in Ship (Sea Bridge)", "Slick Willy's Pawnshop (Salvage City)"},
+        Multi = false,
+        Default = factory,
+    })
+
+    Dropdown:SetValue("four")
+
+    Dropdown:OnChanged(function(Value)
+
+    if Value == "factory"
+then 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3016.96045, 818.472412, 4178.8584, 0.00136271154, 0.782504261, 0.622643769, -0.999998033, 0.000161848162, 0.00198518345, 0.00145264063, -0.622645199, 0.782502949)
+        wait(0.8) 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3016.96045, 818.472412, 4178.8584, 0.00136271154, 0.782504261, 0.622643769, -0.999998033, 0.000161848162, 0.00198518345, 0.00145264063, -0.622645199, 0.782502949)
+
+end
+if Value == "Salvage City"
+then 		  		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-442.241577, 233.353256, 16.6386642, -0.965929747, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, -0.965929747)
+                   wait(0.8)
+                    		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-442.241577, 233.353256, 16.6386642, -0.965929747, 0, 0.258804798, 0, 1, 0, -0.258804798, 0, -0.965929747)
+end
+if Value == "Sea Bridge"
+then 	 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1354.53601, 474.407532, -560.193237, -0.707131445, 6.18193923e-08, 0.707082093, 1.49237849e-07, 1, 6.18193923e-08, -0.707082093, 1.49237849e-07, -0.707131445)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1354.53601, 474.407532, -560.193237, -0.707131445, 6.18193923e-08, 0.707082093, 1.49237849e-07, 1, 6.18193923e-08, -0.707082093, 1.49237849e-07, -0.707131445)
+
+end
+
+if Value == "Mount Char"
+then 	  		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1279.01465, 157.205841, 525.039978, -0.188428402, 0, 0.982087135, 0, 1, 0, -0.982087135, 0, -0.188428402)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1279.01465, 157.205841, 525.039978, -0.188428402, 0, 0.982087135, 0, 1, 0, -0.982087135, 0, -0.188428402)
+end
+if Value == "Forgotten Valley"
+then 	  		  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-209.584625, 348.102875, -696.051453, -0.982082367, 0, -0.18845433, 0, 1, 0, 0.18845433, 0, -0.982082367)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-209.584625, 348.102875, -696.051453, -0.982082367, 0, -0.18845433, 0, 1, 0, 0.18845433, 0, -0.982082367)
+
+
+
+end
+
+
+if Value == " Order Supplies (Factory)"
+then 	  	  				 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3104.80518, 1011.02393, 4401.07422, 0.132508337, 0, 0.99118191, 0, 1, 0, -0.99118191, 0, 0.132508337)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3104.80518, 1011.02393, 4401.07422, 0.132508337, 0, 0.99118191, 0, 1, 0, -0.99118191, 0, 0.132508337)
+
+
+end
+
+if Value == "Shop (Salvage City)"
+then 	  		   		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-736.776672, 232.442673, 308.098969, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-736.776672, 232.442673, 308.098969, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+
+end
+if Value == "Spawn boxes Place - 1 (Mount Char)"
+then 	  		   		 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1478.83252, 147.653305, 449.420013, 0.448553503, -0.606035173, 0.65690273, -0.0015044508, 0.734478056, 0.678630829, -0.893754721, -0.305390507, 0.328540981)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1478.83252, 147.653305, 449.420013, 0.448553503, -0.606035173, 0.65690273, -0.0015044508, 0.734478056, 0.678630829, -0.893754721, -0.305390507, 0.328540981)
+
+end
+if Value == "Spawn boxes Place - 2 (Salvage City)"
+then 	  		 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-824.235474, 187.184235, 536.57135, 0.909787834, -0.0358529352, -0.413522303, 0.01051939, 0.997934103, -0.0633785725, 0.414940298, 0.0533110499, 0.908285439)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-824.235474, 187.184235, 536.57135, 0.909787834, -0.0358529352, -0.413522303, 0.01051939, 0.997934103, -0.0633785725, 0.414940298, 0.0533110499, 0.908285439)
+
+end
+
+if Value == "in Ship (Sea Bridge)"
+then 	  		 			 	 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1133.62671, 484.208679, -383.901062, 0.787054718, -0.616872787, -0.00357460394, 0.00336680282, -0.00149904727, 0.999993205, -0.61687398, -0.787061453, 0.000897056831)
+wait(0.8)
+		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1133.62671, 484.208679, -383.901062, 0.787054718, -0.616872787, -0.00357460394, 0.00336680282, -0.00149904727, 0.999993205, -0.61687398, -0.787061453, 0.000897056831)
+
+if Value == "Slick Willy's Pawnshop (Salvage City)"
+then 	  		 			 	 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-554.197327, 238.358383, 221.815582, 0.656149387, 0.0053627938, -0.754612207, 0.063404873, 0.99604702, 0.0622103065, 0.751962781, -0.0886653438, 0.653215528)
+                             wait(0.8)
+ 		 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-554.197327, 238.358383, 221.815582, 0.656149387, 0.0053627938, -0.754612207, 0.063404873, 0.99604702, 0.0622103065, 0.751962781, -0.0886653438, 0.653215528)
+
+end
+
+end
+
+
+
+       
+    end)
+
+
+
+   
+   
+   
+
+
+
+    local Keybind = Tabs.Goto:AddKeybind("Keybind", {
+        Title = "Coming soon.",
+        Mode = "Toggle", -- Always, Toggle, Hold
+        Default = "LeftControl", -- String as the name of the keybind (MB1, MB2 for mouse buttons)
+
+        -- Occurs when the keybind is clicked, Value is `true`/`false`
+        Callback = function(Value)
+            print("Keybind clicked!", Value)
+        end,
+
+        -- Occurs when the keybind itself is changed, `New` is a KeyCode Enum OR a UserInputType Enum
+        ChangedCallback = function(New)
+            print("Keybind changed!", New)
+        end
+    })
+
+    -- OnClick is only fired when you press the keybind and the mode is Toggle
+    -- Otherwise, you will have to use Keybind:GetState()
+    Keybind:OnClick(function()
+        print("Keybind clicked:", Keybind:GetState())
+    end)
+
+    Keybind:OnChanged(function()
+        print("Keybind changed:", Keybind.Value)
+    end)
+
+    task.spawn(function()
+        while true do
+            wait(1)
+
+            -- example for checking if a keybind is being pressed
+            local state = Keybind:GetState()
+            if state then
+                print("Keybind is being held down")
+            end
+
+            if Fluent.Unloaded then break end
+        end
+    end)
+
+    Keybind:SetValue("MB2", "Toggle") -- Sets keybind to MB2, mode to Hold
+
+  local Input = Tabs.Goto:AddInput("Input", {
+        Title = "Coming soon..",
+        Default = "",
+        Placeholder = "Placeholder",
+        Numeric = false, -- Only allows numbers
+        Finished = false, -- Only calls callback when you press enter
+        Callback = function(Value)
+            print("Input changed:", Value)
+        end
+    })
+
+    Input:OnChanged(function()
+        print("Input updated:", Input.Value)
+    end)
+end
+
+  
+
+    Tabs.Players:AddParagraph({
+        Title = "Players",
+        Content = "POWER"
+    })
+
+   local Slider = Tabs.Players:AddSlider("Slider", {
+        Title = "Speed me",
+        Description = "POWER",
+        Default = 2,
+        Min = 16,
+        Max = 1000,
+        Rounding = 1,
+        Callback = function(Value)
+            print("Slider was changed:", Value)
+        end
+    })
+
+    Slider:OnChanged(function(Value)
+
+
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+
+
+
+    end)
+
+    Slider:SetValue(16)
+
+
+ local Slider = Tabs.Players:AddSlider("Slider", {
+        Title = "Jump Power",
+        Description = "POWER",
+        Default = 2,
+        Min = 50,
+        Max = 1000,
+        Rounding = 1,
+        Callback = function(Value)
+            print("Slider was changed:", Value)
+        end
+    })
+
+    Slider:OnChanged(function(Value)
+
+
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+
+
+
+    end)
+        Slider:SetValue(50)
+
+
+
+
+   Tabs.Players:AddButton({
+        Title = "Inf Jumps",
+        Description = "JUMPS",
+        Callback = function()
+            Window:Dialog({
+                Title = "Sure?",
+                Content = "This is can't Turn off",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+		local InfiniteJumpEnabled = true
+		game:GetService("UserInputService").JumpRequest:connect(function()
+			if InfiniteJumpEnabled then
+				game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+			end
+		end)                        
+        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            print("Cancelled the dialog.")
+                        end
+                    }
+                }
+            })
+        end
+    })
+
+
+
+    Tabs.Bring:AddParagraph({
+        Title = "Bring📦",
+        Content = "HELL YEA🦅🦅🦅"
+    })
+
+
+ local Dropdown = Tabs.Bring:AddDropdown("Dropdown", {
+        Title = "Bring",
+        Values = {"Boxes", "Empty Slot (not bring anythings)"},
+        Multi = false,
+        Default = 1,
+    })
+
+    Dropdown:SetValue("Empty Slot (not bring anythings)")
+
+    Dropdown:OnChanged(function(Value)
+
+
+
+if Value == "Boxes"
+then local Boxes = game.Players.LocalPlayer.Character.HumanoidRootPart
+for i,v in pairs(game.workspace.Boxes:GetChildren()) do
+v.CFrame = Boxes.CFrame
+wait(0.2)
+end
+end
+
+
+
+
+
+
+
+    end)
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+
+-- Hand the library over to our managers
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+
+SaveManager:SetIgnoreIndexes({})
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "Eq Hub",
+    Content = "The script has been loaded.",
+    Duration = 8
+})
+
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
