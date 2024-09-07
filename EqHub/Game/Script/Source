@@ -7,7 +7,7 @@ elseif Iknow == 286090429 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/Eq-Arsenal/main/EqHub/Ez/Roblo"))()
 
 
-elseif Iknow ==  then
+elseif Iknow == 6403373529 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/slapbattles/script/loaded"))()
 
 
