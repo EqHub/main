@@ -5,6 +5,3 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/game/
  else
         game.Players.LocalPlayer:Kick("Please Join the support Game")
 
-        wait(1)
-	    game:GetService("TeleportService"):Teleport(game.Pl, game:GetService("Players").LocalPlayer)
-end
