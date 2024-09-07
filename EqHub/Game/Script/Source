@@ -3,4 +3,8 @@ local Eq = game.PlaceId
 if Eq == 7993293100 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/game/JunkPunk%3ABuildandfly/mainscript/v2"))()
  else
-          game.Players.LocalPlayer:Kick("Please join the support game")
+        game.Players.LocalPlayer:Kick("Please Join the support Game")
+
+        wait(1)
+	    game:GetService("TeleportService"):Teleport(game.Pl, game:GetService("Players").LocalPlayer)
+end
