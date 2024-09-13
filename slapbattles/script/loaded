@@ -10,7 +10,7 @@ local drop = Section:NewDropdown("Select Player!", "Click To Select", Plr, funct
    PlayerTP = t
 end)
 
-Section:NewToggle("Auto Tp", "", function(t)
+Section:NewToggle("Auto Kill", "", function(t)
     
 _G.TPPlayer = t
 while _G.TPPlayer do wait()
