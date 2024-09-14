@@ -1,6 +1,6 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Eq Hub - Tongue Battles", "Ocean")
+local Window = Library.CreateLib("Eq Hub - Slap Battles", "Ocean")
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Auto Go in door")
 Plr = {}
