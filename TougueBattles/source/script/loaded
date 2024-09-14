@@ -18,7 +18,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Player
 
 
 
-_G.TPPlayer = true
    spawn(function()
        game:GetService("RunService").RenderStepped:Connect(function()
         pcall(function()
