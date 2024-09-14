@@ -14,8 +14,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/arsen
 elseif Iknow == 13772394625 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/bladeball/source/script/loaded"))()  
 
-
-
+elseif Iknow == 16721806812 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/TougueBattles/source/script/loaded"))()  
 
 
 
