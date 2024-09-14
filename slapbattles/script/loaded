@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Eq Hub - Slap Battles", "Ocean")
 local Tab = Window:NewTab("Main")
-local Section = Tab:NewSection("Auto Go in doors first")
+local Section = Tab:NewSection("Auto Go in doors")
 Plr = {}
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(Plr,v.Name) 
