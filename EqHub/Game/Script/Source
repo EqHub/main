@@ -11,6 +11,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/slapb
 elseif Iknow == 286090429 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/arsenal/script/source/loaded"))()
 
+elseif Iknow == 13772394625 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EqHub/main/main/bladeball/source/script/loaded"))()  
+
+
+
+
+
+
 else
         game.Players.LocalPlayer:Kick("Please join support Game!")
         wait(0)
