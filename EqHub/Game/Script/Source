@@ -1,4 +1,4 @@
-bruh = "main"
+local bruh = "main"
 
 
 local Iknow = game.PlaceId
