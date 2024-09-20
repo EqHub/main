@@ -1,22 +1,96 @@
 
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Eq Hub - Slap Battles", "Ocean")
-local Tab = Window:NewTab("Main")
-local Section = Tab:NewSection("Auto Go in door")
 Plr = {}
 for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(Plr,v.Name) 
 end
-local drop = Section:NewDropdown("Select Player!", "Click To Select", Plr, function(t)
-   PlayerTP = t
-end)
 
-Section:NewToggle("Auto Kill", "", function(t)
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title = "Slap Battles",
+    SubTitle = "by Eq Hub",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Amethyst",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" })
+}
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Credits",
+        Content = "by Fxdogxd",
+        SubContent = "Ugly name lol", -- Optional
+        Duration = 5 -- Set to nil to make the notification not disappear
+    })
+
+
+
+    Tabs.Main:AddParagraph({
+        Title = "Menu",
+        Content = "Menu.."
+    })
+
+
+
+    
+
+
+
+
+    
+  
+
+
+
+    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+        Title = "Select Target",
+        Values = Plr,
+        Multi = false,
+        Default = 1,
+    })
+
+    Dropdown:SetValue("four")
+
+    Dropdown:OnChanged(function(t)
+print(t)
+
+
+   PlayerTP = t
+
+print(t)
+    end)
+
+end
+    
+    
+  
+
+
+ local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Auto Kill", Default = false })
+
+    Toggle:OnChanged(function(t)
+
+local Esp = Options.MyToggle.Value
+
+if Esp == true then
+
+
+
+
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-810.162292, 329.90094, 3.9865303, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- slap battles | 
 _G.TPPlayer = t
 while _G.TPPlayer do wait()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,5)
-
 
 
    spawn(function()
@@ -30,27 +104,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Player
        end)
     end)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+end
 
 
 
@@ -60,12 +114,30 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Player
 
 
 end
-end)
 
- Section:NewButton("Refresh Players","Refresh Dropdown", function()
-    Plr = {}
-    for i,v in pairs(game:GetService("Players"):GetChildren()) do
-        table.insert(Plr,v.Name) 
-    end
-  drop:Refresh(Plr)
 end)
+    Options.MyToggle:SetValue(false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fluent:Notify({
+    Title = "Eq Hub",
+    Content = "The script has been loaded.",
+    Duration = 8
+})
+
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
