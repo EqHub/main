@@ -1,5 +1,30 @@
+ getgenv().Antiknokoffsb = false
+    while getgenv().Antiknokoffsb do
+    if game.Workspace.CurrentCamera and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and game.Workspace.CurrentCamera.CameraSubject ~= game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and game.Workspace.CurrentCamera.CameraSubject == game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name.."'s_falsehead") then
+    game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+    end
+    task.wait()
+    end
 
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+
+
+Plr = {}
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+    table.insert(Plr,v.Name) 
+end
+    
+  
+
+
+
+
+
+
+
+
+
+
+    local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
@@ -15,9 +40,12 @@ local Window = Fluent:CreateWindow({
 
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "" })
-}
+    Main = Window:AddTab({ Title = "Main", Icon = "usb" }),
+        Players = Window:AddTab({ Title = "Player", Icon = "users" }),
 
+
+
+}
 local Options = Fluent.Options
 
 do
@@ -27,6 +55,7 @@ do
         SubContent = "Ugly name lol", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
+
 
 
 
@@ -40,14 +69,6 @@ do
     
 
 
-
-
-Plr = {}
-for i,v in pairs(game:GetService("Players"):GetChildren()) do
-    table.insert(Plr,v.Name) 
-end
-    
-  
 
 
 
@@ -76,8 +97,8 @@ end
 
     Toggle:OnChanged(function(t)
 
-
 local Esp = Options.MyToggle.Value
+
 
 if Esp == true then
 
@@ -85,7 +106,7 @@ if Esp == true then
 
 
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-810.162292, 329.90094, 3.9865303, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- slap battles | 
-_G.TPPlayer = t
+_G.TPPlayer = true
 while _G.TPPlayer do wait()
 
 
@@ -115,54 +136,315 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Player
         print("Eq Value :", Esp)
 
 
+
+end
+
 if Esp == false then
 
 
-
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-810.162292, 329.90094, 3.9865303, 1, 0, 0, 0, 1, 0, 0, 0, 1) -- slap battles | 
-_G.TPPlayer = t
-while _G.TPPlayer do wait()
+_G.TPPlayer = false
 
 
 
 
+end
+end
+end)
+    Options.MyToggle:SetValue(false)
+
+
+
+ Tabs.Main:AddButton({
+        Title = "Refresh Players",
+        Description = "Update Dropdown",
+        Callback = function(t)
+           
+
+
+        Values = Plr
+
+
+
+
+        end
+    })
 
 
 
 
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
 
 
 
-   spawn(function()
-       game:GetService("RunService").RenderStepped:Connect(function()
-        pcall(function()
-            if _G.TPPlayer then
-            game:GetService'VirtualUser':CaptureController()
-            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-            end
-        end)
-       end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------- Players tab
+
+ local Slider = Tabs.Players:AddSlider("Slider", {
+        Title = "Speed Power",
+        Description = "Hmmm🤔",
+        Default = 2,
+        Min = 16,
+        Max = 3000,
+        Rounding = 1,
+        Callback = function(Value)
+
+        end
+    })
+
+    Slider:OnChanged(function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end)
+
+    Slider:SetValue(16)
+
+ local Slider = Tabs.Players:AddSlider("Slider", {
+        Title = "Jump power",
+        Description = "what🌾",
+        Default = 2,
+        Min = 50,
+        Max = 3000,
+        Rounding = 1,
+        Callback = function(Value)
+        
+        end
+    })
+
+    Slider:OnChanged(function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
     end)
 
 
 
+    Slider:SetValue(50)
+
+
+ local Slider = Tabs.Players:AddSlider("Slider", {
+        Title = "Gravity",
+        Description = "what🌾",
+        Default = 2,
+        Min = 0,
+        Max = 500,
+        Rounding = 1,
+        Callback = function(Value)
+        end
+    })
+
+    Slider:OnChanged(function(Value)
+            workspace.Gravity = Value
+    end)
+
+
+
+    Slider:SetValue(0)
+
+
+
+
+local Toggle = Tabs.Players:AddToggle("MyToggle", {Title = "Esp", Default = false })
+
+    Toggle:OnChanged(function(t)
+
+local Esp = Options.MyToggle.Value
+
+
+if Esp == true then
+
+
+
+
+    getgenv().epssb = true
+        if getgenv().epssb == false then
+            for i, v in ipairs(game.Players:GetChildren()) do
+                if v.Character and v.Character:FindFirstChild("Head") and v.Character.Head:FindFirstChild("Gesp") then
+                    v.Character.Head.Gesp:Destroy()
+                end
+            end
+            wait(0.1)
+            local objects = game:GetService("Workspace"):GetDescendants()
+            for _, object in ipairs(objects) do
+                if object.Name == "esp" then
+                    object:Destroy()
+                end
+            end
+        end
+        while getgenv().epssb do
+    for i, v in ipairs(game.Players:GetChildren()) do
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("Gesp") == nil then
+            Gesp = Instance.new("BillboardGui", v.Character.Head)
+            Gesp.Adornee = v.Character.Head
+            Gesp.Name = "Gesp"
+            Gesp.Size = UDim2.new(0, 100, 0, 150)
+            Gesp.StudsOffset = Vector3.new(0, 1, 0)
+            Gesp.AlwaysOnTop = true
+            Gesp.StudsOffset = Vector3.new(0, 3, 0)
+            Gesp.StudsOffset = Vector3.new(0, 3, 0)
+            GespText = Instance.new("TextLabel", Gesp)
+            GespText.BackgroundTransparency = 1
+            GespText.Size = UDim2.new(0, 100, 0, 100)
+            GespText.TextSize = 17
+            GespText.Font = Enum.Font.SourceSansSemibold
+            GespText.TextColor3 = Color3.fromRGB(255,48,48)
+            GespText.TextStrokeTransparency = 0
+            GespText.Text = v.leaderstats.Glove.Value
+        end
+    end
+        for i, v in ipairs(game.Players:GetChildren()) do
+            if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Torso:FindFirstChild("esp") == nil then
+                esp = Instance.new("BoxHandleAdornment", v.Character.Torso)
+                esp.Adornee = v.Character.Torso
+                esp.ZIndex = 0
+                esp.Size = Vector3.new(4, 5, 1)
+                esp.Transparency = 0.65
+                esp.Color3 = Color3.fromRGB(255,48,48)
+                esp.AlwaysOnTop = true
+                esp.Name = "esp"
+            end
+        end
+        task.wait(0.2)
+    end
+
+
+
 
 end
 
 
-end
-end
+if Esp == false then
 
 
 
 
 
+
+
+
+
+    getgenv().epssb = false
+        if getgenv().epssb == false then
+            for i, v in ipairs(game.Players:GetChildren()) do
+                if v.Character and v.Character:FindFirstChild("Head") and v.Character.Head:FindFirstChild("Gesp") then
+                    v.Character.Head.Gesp:Destroy()
+                end
+            end
+            wait(0.1)
+            local objects = game:GetService("Workspace"):GetDescendants()
+            for _, object in ipairs(objects) do
+                if object.Name == "esp" then
+                    object:Destroy()
+                end
+            end
+        end
+        while getgenv().epssb do
+    for i, v in ipairs(game.Players:GetChildren()) do
+        if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Head") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Head:FindFirstChild("Gesp") == nil then
+            Gesp = Instance.new("BillboardGui", v.Character.Head)
+            Gesp.Adornee = v.Character.Head
+            Gesp.Name = "Gesp"
+            Gesp.Size = UDim2.new(0, 100, 0, 150)
+            Gesp.StudsOffset = Vector3.new(0, 1, 0)
+            Gesp.AlwaysOnTop = true
+            Gesp.StudsOffset = Vector3.new(0, 3, 0)
+            Gesp.StudsOffset = Vector3.new(0, 3, 0)
+            GespText = Instance.new("TextLabel", Gesp)
+            GespText.BackgroundTransparency = 1
+            GespText.Size = UDim2.new(0, 100, 0, 100)
+            GespText.TextSize = 17
+            GespText.Font = Enum.Font.SourceSansSemibold
+            GespText.TextColor3 = Color3.fromRGB(255,48,48)
+            GespText.TextStrokeTransparency = 0
+            GespText.Text = v.leaderstats.Glove.Value
+        end
+    end
+        for i, v in ipairs(game.Players:GetChildren()) do
+            if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Torso") and v.Character:FindFirstChild("entered") and v.Character.IsInDefaultArena.Value == false and v.Character.Torso:FindFirstChild("esp") == nil then
+                esp = Instance.new("BoxHandleAdornment", v.Character.Torso)
+                esp.Adornee = v.Character.Torso
+                esp.ZIndex = 0
+                esp.Size = Vector3.new(4, 5, 1)
+                esp.Transparency = 0.65
+                esp.Color3 = Color3.fromRGB(255,48,48)
+                esp.AlwaysOnTop = true
+                esp.Name = "esp"
+            end
+        end
+        task.wait(0.2)
+    end
 
 
 end
 end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ local Toggle = Tabs.Players:AddToggle("MyToggle", {Title = "Remove name Tag", Default = false })
+
+    Toggle:OnChanged(function()
+
+    local Esp = Options.MyToggle.Value
+
+if Esp == true then
+getgenv().removenametag = true
+        if getgenv().removenametag == false then
+            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = true
+        end
+        while getgenv().removenametag do
+            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = false
+        task.wait(0.3)
+        end
+        end
+
+
+
+        if Esp == false then
+
+getgenv().removenametag = false
+        if getgenv().removenametag == false then
+            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = true
+        end
+        while getgenv().removenametag do
+            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = false
+        task.wait(0.3)
+        end
+
+        end
+    end)
+
     Options.MyToggle:SetValue(false)
 
 
@@ -181,10 +463,100 @@ end)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+--------------- farm tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
 Fluent:Notify({
     Title = "Eq Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
 
--- You can use the SaveManager:LoadAutoloadConfig() to load a config
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
