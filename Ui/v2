@@ -1,0 +1,325 @@
+local Converted = {
+	["_HealthBarGui"] = Instance.new("ScreenGui");
+	["_Name"] = Instance.new("TextLabel");
+	["_Display Name"] = Instance.new("TextLabel");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_TextLabel"] = Instance.new("TextLabel");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_UICorner"] = Instance.new("UICorner");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_Picture"] = Instance.new("ImageLabel");
+	["_DA"] = Instance.new("LocalScript");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_Map"] = Instance.new("TextLabel");
+	["_Id map"] = Instance.new("Frame");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_Id"] = Instance.new("TextLabel");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_Fe script"] = Instance.new("Frame");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_Fe car"] = Instance.new("TextButton");
+	["_LocalScript3"] = Instance.new("LocalScript");
+	["_Inf YIELD"] = Instance.new("TextButton");
+	["_LocalScript4"] = Instance.new("LocalScript");
+}
+
+-- Properties:
+
+Converted["_HealthBarGui"].Name = "HealthBarGui"
+Converted["_HealthBarGui"].Parent = game:GetService("CoreGui")
+
+Converted["_Name"].Font = Enum.Font.SourceSans
+Converted["_Name"].Text = "Name :"
+Converted["_Name"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name"].TextSize = 14
+Converted["_Name"].BackgroundColor3 = Color3.fromRGB(57.00000040233135, 57.00000040233135, 57.00000040233135)
+Converted["_Name"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name"].BorderSizePixel = 0
+Converted["_Name"].Position = UDim2.new(0.116509929, 0, 0.789731026, 0)
+Converted["_Name"].Size = UDim2.new(0, 78, 0, 48)
+Converted["_Name"].Name = "Name"
+Converted["_Name"].Parent = Converted["_HealthBarGui"]
+
+Converted["_Display Name"].Font = Enum.Font.SourceSans
+Converted["_Display Name"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Display Name"].TextSize = 14
+Converted["_Display Name"].BackgroundColor3 = Color3.fromRGB(49.00000087916851, 49.00000087916851, 49.00000087916851)
+Converted["_Display Name"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Display Name"].BorderSizePixel = 0
+Converted["_Display Name"].Position = UDim2.new(1.20810211, 0, -0.0180183575, 0)
+Converted["_Display Name"].Size = UDim2.new(0, 219, 0, 21)
+Converted["_Display Name"].Name = "Display Name"
+Converted["_Display Name"].Parent = Converted["_Name"]
+
+Converted["_TextLabel"].Font = Enum.Font.SourceSans
+Converted["_TextLabel"].Text = "@"
+Converted["_TextLabel"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].TextSize = 14
+Converted["_TextLabel"].TextTransparency = 0.5
+Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(49.00000087916851, 49.00000087916851, 49.00000087916851)
+Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel"].BorderSizePixel = 0
+Converted["_TextLabel"].Position = UDim2.new(-0.00456620986, 0, 1.28570557, 0)
+Converted["_TextLabel"].Size = UDim2.new(0, 219, 0, 21)
+Converted["_TextLabel"].Parent = Converted["_Display Name"]
+
+Converted["_UICorner"].Parent = Converted["_TextLabel"]
+
+Converted["_UICorner1"].Parent = Converted["_Display Name"]
+
+Converted["_UICorner2"].Parent = Converted["_Name"]
+
+Converted["_Picture"].Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Converted["_Picture"].BackgroundColor3 = Color3.fromRGB(62.00000390410423, 62.00000390410423, 62.00000390410423)
+Converted["_Picture"].BackgroundTransparency = 1
+Converted["_Picture"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Picture"].BorderSizePixel = 0
+Converted["_Picture"].Position = UDim2.new(0.00417972822, 0, 0.727383852, 0)
+Converted["_Picture"].Size = UDim2.new(0, 199, 0, 189)
+Converted["_Picture"].Name = "Picture"
+Converted["_Picture"].Parent = Converted["_HealthBarGui"]
+
+Converted["_UICorner3"].CornerRadius = UDim.new(0, 100000000)
+Converted["_UICorner3"].Parent = Converted["_Picture"]
+
+Converted["_Map"].Font = Enum.Font.SourceSans
+Converted["_Map"].Text = "Map :"
+Converted["_Map"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Map"].TextSize = 14
+Converted["_Map"].BackgroundColor3 = Color3.fromRGB(57.00000040233135, 57.00000040233135, 57.00000040233135)
+Converted["_Map"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Map"].BorderSizePixel = 0
+Converted["_Map"].Position = UDim2.new(0.116509929, 0, 0.874083102, 0)
+Converted["_Map"].Size = UDim2.new(0, 78, 0, 37)
+Converted["_Map"].Name = "Map"
+Converted["_Map"].Parent = Converted["_HealthBarGui"]
+
+Converted["_Id map"].BackgroundColor3 = Color3.fromRGB(49.00000087916851, 49.00000087916851, 49.00000087916851)
+Converted["_Id map"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Id map"].BorderSizePixel = 0
+Converted["_Id map"].Position = UDim2.new(1.20512819, 0, 0.196362719, 0)
+Converted["_Id map"].Size = UDim2.new(0, 259, 0, 23)
+Converted["_Id map"].Name = "Id map"
+Converted["_Id map"].Parent = Converted["_Map"]
+
+Converted["_UICorner4"].Parent = Converted["_Id map"]
+
+Converted["_Id"].Font = Enum.Font.SourceSans
+Converted["_Id"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Id"].TextSize = 14
+Converted["_Id"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Id"].BackgroundTransparency = 1
+Converted["_Id"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Id"].BorderSizePixel = 0
+Converted["_Id"].Position = UDim2.new(-0.00296550733, 0, -0.0434782617, 0)
+Converted["_Id"].Size = UDim2.new(0, 250, 0, 24)
+Converted["_Id"].Name = "Id"
+Converted["_Id"].Parent = Converted["_Id map"]
+
+Converted["_UICorner5"].Parent = Converted["_Map"]
+
+Converted["_Fe script"].BackgroundColor3 = Color3.fromRGB(0, 255, 94.0000019967556)
+Converted["_Fe script"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Fe script"].BorderSizePixel = 0
+Converted["_Fe script"].Position = UDim2.new(0.110762797, 0, 0.937652826, 0)
+Converted["_Fe script"].Size = UDim2.new(0, 364, 0, 36)
+Converted["_Fe script"].Name = "Fe script"
+Converted["_Fe script"].Parent = Converted["_HealthBarGui"]
+
+Converted["_UICorner6"].Parent = Converted["_Fe script"]
+
+Converted["_Fe car"].Font = Enum.Font.SourceSans
+Converted["_Fe car"].Text = "Fe Car"
+Converted["_Fe car"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Fe car"].TextSize = 14
+Converted["_Fe car"].BackgroundColor3 = Color3.fromRGB(14.000000115484, 207.00000286102295, 85.0000025331974)
+Converted["_Fe car"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Fe car"].BorderSizePixel = 0
+Converted["_Fe car"].Position = UDim2.new(0.0302197803, 0, 0.25, 0)
+Converted["_Fe car"].Size = UDim2.new(0, 119, 0, 19)
+Converted["_Fe car"].Name = "Fe car"
+Converted["_Fe car"].Parent = Converted["_Fe script"]
+
+Converted["_Inf YIELD"].Font = Enum.Font.SourceSans
+Converted["_Inf YIELD"].Text = "INF YIELD"
+Converted["_Inf YIELD"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Inf YIELD"].TextSize = 14
+Converted["_Inf YIELD"].BackgroundColor3 = Color3.fromRGB(14.000000115484, 207.00000286102295, 85.0000025331974)
+Converted["_Inf YIELD"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Inf YIELD"].BorderSizePixel = 0
+Converted["_Inf YIELD"].Position = UDim2.new(0.232497394, 0, 0.947432756, 0)
+Converted["_Inf YIELD"].Size = UDim2.new(0, 119, 0, 19)
+Converted["_Inf YIELD"].Name = "Inf YIELD"
+Converted["_Inf YIELD"].Parent = Converted["_HealthBarGui"]
+
+-- Fake Module Scripts:
+
+local fake_module_scripts = {}
+
+
+-- Fake Local Scripts:
+
+local function FRCRG_fake_script() -- Fake Script: StarterGui.HealthBarGui.Name.Display Name.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Display Name"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	sdgjsfdog = game.Players.LocalPlayer
+	
+	
+	script.Parent.Text = sdgjsfdog.DisplayName
+	
+	
+	
+end
+local function VOND_fake_script() -- Fake Script: StarterGui.HealthBarGui.Name.Display Name.TextLabel.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_TextLabel"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local asdjgajdg = game.Players.LocalPlayer
+	
+	
+	script.Parent.Text = asdjgajdg.Name
+end
+local function WAXOQVJ_fake_script() -- Fake Script: StarterGui.HealthBarGui.Picture.DA
+    local script = Instance.new("LocalScript")
+    script.Name = "DA"
+    script.Parent = Converted["_Picture"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local imagelable = script.Parent
+	imagelable.Image = Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+end
+local function JWOOCF_fake_script() -- Fake Script: StarterGui.HealthBarGui.Map.Id map.Id.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Id"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	kjfds = game.PlaceId
+	
+	
+	script.Parent.Text = kjfds
+end
+local function NNYMUM_fake_script() -- Fake Script: StarterGui.HealthBarGui.Fe script.Fe car.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Fe car"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Up:Connect(function()
+		
+		
+		
+		if game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == Enum.HumanoidRigType.R6 then
+	
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").WalkSpeed = 60
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").JumpPower = 20
+			game:GetService("Players").LocalPlayer.Character.Animate.walk.WalkAnim.AnimationId = "rbxassetid://129342287"
+			game:GetService("Players").LocalPlayer.Character.Animate.run.RunAnim.AnimationId = "rbxassetid://129342287"
+			game:GetService("Players").LocalPlayer.Character.Animate.fall.FallAnim.AnimationId = "rbxassetid://129342287"
+			game:GetService("Players").LocalPlayer.Character.Animate.idle.Animation1.AnimationId = "rbxassetid://129342287"
+			game:GetService("Players").LocalPlayer.Character.Animate.idle.Animation2.AnimationId = "rbxassetid://129342287"
+			game:GetService("Players").LocalPlayer.Character.Animate.jump.JumpAnim.AnimationId = "rbxassetid://129342287"
+			for i, thing in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+				if thing.ClassName == "Part" then
+					thing.CustomPhysicalProperties = PhysicalProperties.new(0.04, 0, 0)
+				end
+			end
+			local r6height = "-1.03"
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").HipHeight = r6height
+	
+		elseif game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").WalkSpeed = 60
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").JumpPower = 20
+			game:GetService("Players").LocalPlayer.Character.Animate.walk.WalkAnim.AnimationId = "rbxassetid://3360694441"
+			game:GetService("Players").LocalPlayer.Character.Animate.run.RunAnim.AnimationId = "rbxassetid://3360694441"
+			game:GetService("Players").LocalPlayer.Character.Animate.fall.FallAnim.AnimationId = "rbxassetid://3360694441"
+			game:GetService("Players").LocalPlayer.Character.Animate.idle.Animation1.AnimationId = "rbxassetid://3360694441"
+			game:GetService("Players").LocalPlayer.Character.Animate.idle.Animation2.AnimationId = "rbxassetid://3360694441"
+			game:GetService("Players").LocalPlayer.Character.Animate.jump.JumpAnim.AnimationId = "rbxassetid://3360694441"
+			for i, thing in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
+				if thing.ClassName == "MeshPart" then
+					thing.CustomPhysicalProperties = PhysicalProperties.new(0.04, 0, 0)
+				end
+			end
+			local r15height = "0.56"
+			game:GetService("Players").LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid").HipHeight = r15height
+		end
+		
+		
+		
+	end)
+end
+local function KUKV_fake_script() -- Fake Script: StarterGui.HealthBarGui.Inf YIELD.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Inf YIELD"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Up:Connect(function()
+		
+		
+		
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KeanXR/INF-YIELD/refs/heads/main/v6.0.0",true))()
+		
+		
+		
+	end)
+end
+
+coroutine.wrap(FRCRG_fake_script)()
+coroutine.wrap(VOND_fake_script)()
+coroutine.wrap(WAXOQVJ_fake_script)()
+coroutine.wrap(JWOOCF_fake_script)()
+coroutine.wrap(NNYMUM_fake_script)()
+coroutine.wrap(KUKV_fake_script)()
